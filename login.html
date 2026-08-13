@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background">
+    <!-- Floating code symbols -->
+    <span class="symbol">{ }</span>
+    <span class="symbol">&lt;/&gt;</span>
+    <span class="symbol">;</span>
+    <span class="symbol">()</span>
+  </div>
+
+  <div class="login-card">
+    <img src="ChatGPT Image Aug 11, 2026, 03_56_58 PM.png" alt="Profile Photo" class="profile-pic">
+    <h2>M. Shanmuga Priya</h2>
+    <p class="subtitle">Computer Science Student | Web Developer</p>
+
+
+
+    <form id="loginForm">
+      <div id="loginPanel">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group password-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁</span>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" id="remember"> Remember Me</label>
+          <button type="button" class="forgot" id="forgotLink">Forgot Password?</button>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </div>
+
+      <div id="forgotPanel" class="hidden">
+        <div class="input-group password-group">
+          <label for="forgot-new-password">New Password</label>
+          <input type="password" id="forgot-new-password" placeholder="Enter new password">
+        </div>
+
+        <div class="input-group password-group">
+          <label for="forgot-confirm-password">Confirm New Password</label>
+          <input type="password" id="forgot-confirm-password" placeholder="Confirm new password">
+        </div>
+
+        <div class="options reset-options">
+          <label><input type="checkbox" id="show-forgot-passwords"> Show/Hide Password</label>
+        </div>
+
+        <button type="button" class="login-btn" id="forgotUpdateBtn">Change Password</button>
+        <button type="button" class="login-btn secondary-btn" id="backToLoginBtn">Back to Login</button>
+        <p id="forgot-message" class="message"></p>
+      </div>
+
+      <p id="error-message"></p>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
